@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_09_135306) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_28_085805) do
   create_table "appointments", force: :cascade do |t|
     t.integer "doctor_id"
     t.integer "patient_id"
@@ -33,6 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_09_135306) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "medical_id"
   end
 
   create_table "patients", force: :cascade do |t|
@@ -43,6 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_09_135306) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "contact"
   end
 
   create_table "professions", force: :cascade do |t|

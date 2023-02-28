@@ -8,13 +8,13 @@
 puts "seeding database..."
 
 10.times do |i|
-    Doctor.create(first_name: Faker::Name.first_name, last_name: Faker::Name.middle_name, contact: 254712345678, password: "doc", password_confirmation: "doc")
+    Doctor.create(first_name: Faker::Name.first_name, last_name: Faker::Name.middle_name, contact: 254712345678, medical_id: rand(300..500), password: "doc", password_confirmation: "doc")
 end
 
 puts "doctors created"
 
 10.times do |i|
-    Patient.create(first_name: Faker::Name.first_name, last_name: Faker::Name.middle_name, age: rand(30), gender: Faker::Gender.binary_type,  password: "pat", password_confirmation: "pat")
+    Patient.create(first_name: Faker::Name.first_name, last_name: Faker::Name.middle_name, age: rand(30), gender: Faker::Gender.binary_type, contact:254712345678, password: "pat", password_confirmation: "pat")
 end
 
 puts "patients created"
